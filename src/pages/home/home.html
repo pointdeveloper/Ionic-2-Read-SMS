@@ -1,0 +1,19 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Ionic Blank
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<button ion-button full (click)="getSMS()">Get SMS</button>
+
+	<ion-list>
+		<ion-item *ngFor="let sms of smses">
+			<ion-icon name="star" *ngIf="sms.read==0"></ion-icon>
+			{{sms.address}}
+			<p>{{sms.body}}</p>
+		</ion-item>
+	</ion-list>
+</ion-content>
